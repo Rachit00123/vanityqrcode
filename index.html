@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Vanity QR Code Generator ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Vanity QR Code Generator ✨</h1>
+
+    <label>Enter Text or URL:</label>
+    <input type="text" id="text" placeholder="Enter text or URL">
+
+    <div class="color-row">
+      <div>
+        <label>Foreground Color:</label>
+        <input type="color" id="foreground" value="#000000">
+      </div>
+      <div>
+        <label>Background Color:</label>
+        <input type="color" id="background" value="#ffffff">
+      </div>
+    </div>
+
+    <label>Upload Center Logo (Optional):</label>
+    <input type="file" id="logo" accept="image/*">
+
+    <button onclick="generateQR()">Generate QR Code</button>
+
+    <div id="qrcode"></div>
+
+    <div class="download-row">
+      <button onclick="downloadQR('png')">Download PNG</button>
+      <button onclick="downloadQR('jpeg')">Download JPEG</button>
+    </div>
+  </div>
+
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
